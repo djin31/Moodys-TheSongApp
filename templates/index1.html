@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Moodies</title>
+
+<!-- For-Mobile-Apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Boombox a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //For-Mobile-Apps -->
+
+<!-- Custom-Theme-Files -->
+    <!-- Bootstrap-CSS --> <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <!-- jQuery --> <script src="{% static "js/jquery.min.js" %}"></script>
+    <!-- Bootstrap-Main --> <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <!-- Index-Page-Styling --> <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" media="all">
+<!-- //Custom-Theme-Files -->
+
+<!-- webrtc javascript -->
+<script src="{% static "js/webcam.js" %}"></script>
+
+<!-- Start-Smooth-Scrolling -->
+<script src="{% static "js/jquery-1.8.3.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/move-top.js" %}"></script>
+<script type="text/javascript" src={% static "js/easing.js" %}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){     
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+            });
+        });
+    </script>
+<!-- //End-Smooth-Scrolling -->
+
+</head>
+<body>
+<!-- Body-Starts-Here -->
+
+<div id="grad1">
+
+<a href="#"><h1>MOODIES</h1></a>
+
+<div class="page">
+
+    <div class="container">
+
+        <!-- Banner-Starts-Here -->
+
+        <div class="banner">
+
+            
+
+            <!-- Chart-Starts-Here -->
+
+            <div class="col-md-4" id="heading">
+                <span>Up for </span>
+                <span>a Song?</span>
+                <div class="para">
+                    <p>1. Click a picture</p>
+                    <p>2. Get songs to suit your mood</p>
+                    <p>3. Plug in & Enjoy!</p>
+                </div>
+                <div class="camera">
+				    <video id="video">Video stream not available.</video>
+				    <button id="startbutton">Take photo</button>
+				</div>
+				<canvas id="canvas" style="display: none;">
+				</canvas>
+				<div class="output" style="display: none;">
+					<img id="photo" alt="The screen capture will appear in this box.">
+					<form method="POST" action="/playlist/" id="postForm" enctype="multipart/form-data">
+						{% csrf_token %}
+						<input type = 'hidden' name = 'file' id = 'inputImage'>
+				            <!-- {{ form.as_p }} -->
+					</form>
+				</div> 
+
+            </div>
+
+            <div class="col-md-8" id="girl">
+
+                
+            </div>
+
+            <!-- //Chart-Ends-Here -->
+
+        </div>
+
+        <!-- //Banner-Ends-Here -->
+
+        <!-- Content-Starts-Here -->
+
+        <div class="content">
+
+            <div class="about">
+
+                <div class="top">
+
+                    <div class="col-md-5" id="hover">
+
+                        <div class="hover1">
+                            <h2>TOP 100 CHARTS</h2>
+                            <p>Dive into the world of music with our handpicked songs</p>
+                            <a href="https://gaana.com/playlist/gaana-dj-bollywood-top-50-1" class="button outline-inward">CHARTS</a>
+                        </div>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+            </div>
+
+            <div class="artists" id="artists">
+                <h3>ARTISTS</h3>
+                <div class="grid1">
+                    <ul>
+                        <li><a href="https://gaana.com/artist/arijit-singh" target="new">Arijit Singh</a></li>
+                        <li><a href="https://gaana.com/artist/atif-aslam" target="new">Atif Aslam</a></li>
+                        <li><a href="https://gaana.com/artist/ar-rahman" target="new">A R Rehman</a></li>
+                        <li><a href="https://gaana.com/artist/sonu-nigam-1" target="new">Sonu Nigam</a></li>
+                        <li><a href="https://gaana.com/artist/neeti-mohan" target="new">Neeti Mohan</a></li>
+                    </ul>
+                </div>
+                <div class="grid2">
+                    <ul>
+                        <li><a href="https://gaana.com/artist/ed-sheeran" target="new">Ed Sheeran</a></li>
+                        <li><a href="https://gaana.com/artist/abba" target="new">ABBA</a></li>
+                        <li><a href="https://gaana.com/artist/one-direction" target="new">One Direction</a></li>
+                        <li><a href="https://gaana.com/artist/rihanna" target="new">Rihanna</a></li>
+                        <li><a href="https://gaana.com/artist/coldplay" target="new">Coldplay</a></li>
+                    </ul>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+
+        <!-- //Content-Ends-Here -->
+
+        <!-- Footer-Starts-Here -->
+
+        <div class="footer">
+
+
+            <script type="text/javascript">
+				$(document).ready(function() {
+					/*
+						var defaults = {
+							containerID: 'toTop', // fading element id
+							containerHoverID: 'toTopHover', // fading element hover id
+							scrollSpeed: 1200,
+							easingType: 'linear' 
+						};
+					*/
+					$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+            </script>
+			
+            <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+        </div>
+
+        <!-- //Footer-Ends-Here -->
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- //Body-Ends-Here -->
+
+</body>
+</html>
