@@ -18,11 +18,8 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-#from SongsApp.views import index
-#from SongsApp.views import playlist
-
-from views import index
-from views import playlist
+from SongsApp.views import index
+from SongsApp.views import playlist
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
