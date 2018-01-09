@@ -25,6 +25,6 @@ from SongsApp.views import home
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/$', index),
-    url(r'^/$', home),
+    url(r'^$', home),
     url(r'^playlist/$', playlist),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
