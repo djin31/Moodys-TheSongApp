@@ -37,3 +37,6 @@ def playlist(request):
 def index(request):
     form = UploadFileForm()
     return render(request, 'index.html', {'form' : form})
+
+def home(request):
+    return HttpResponseRedirect('/index/')
