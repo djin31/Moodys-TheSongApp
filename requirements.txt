@@ -1,4 +1,4 @@
---find-links wheelhouse
+setuptools
 django
 bs4
 base64
