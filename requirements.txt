@@ -1,5 +1,4 @@
 setuptools
 django<2
 bs4
-base64
 re
