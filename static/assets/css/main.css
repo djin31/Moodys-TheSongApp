@@ -6,6 +6,10 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+@font-face{
+    font-family: 'Bangers';
+    src: url(../fonts/Bangers.ttf) format('truetype');
+}
 
 /* Reset */
 
@@ -1840,9 +1844,11 @@
 
 	p {
 		margin: 0 0 2em 0;
+		font-size: 30px;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
+		font-weight: bold;
 		color: #555;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -2801,9 +2807,10 @@
 		background-color: #4686a0;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
-		background-position: top left,						center center,					center center;
-		background-size: auto,							cover,							cover;
+		/*background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);*/
+		background-position:					center center,					center center;
+		background-size: cover;
+		background-repeat: no-repeat;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
@@ -2890,11 +2897,16 @@
 		}
 
 		#header h1 {
+			font-family: "Bangers";
 			margin: 0;
+			color: rgba(0,0,0,255);
+
 		}
 
 		#header p {
+			font-weight: bold;
 			margin: 1em 0 0 0;
+			color: rgba(255,255,255,255);
 		}
 
 		#header .actions {
@@ -2951,9 +2963,10 @@
 			-webkit-transition: opacity 1s ease;
 			-ms-transition: opacity 1s ease;
 			transition: opacity 1s ease;
-			background-image: linear-gradient(45deg, #4fa49a, #4361c2);
+			/*background-image: linear-gradient(45deg, #4fa49a, #4361c2);Djin31*/
+			background-repeat: no-repeat;
 			content: '';
-			height: 100%;
+			width: 100%;
 			left: 0;
 			opacity: 0;
 			position: absolute;
@@ -2988,9 +3001,9 @@
 		background-color: #4686a0;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
-		background-position: top left,						center center,					center center;
-		background-size: auto,							cover,							cover;
+		background-position:					center center,					center center;
+		background-size: cover;
+		background-repeat: no-repeat;							cover,							cover;
 		text-align: center;
 	}
 
