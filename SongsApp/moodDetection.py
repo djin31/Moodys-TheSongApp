@@ -89,6 +89,16 @@ def songs(url1, url2, url3):
 			break
 
 	shuffle(final_list)
+	for i in xrange(10):
+		song_to_search = final_list[i][1]
+		song_to_search.replace(" ","+")
+		html = urllib.urlopen("https://www.youtube.com/results?search_query="+song_to_search).read()
+		soup = BS(html,"html.parser")
+		for url in soup.find_all('a'):
+			u = str(url)
+			if u.find("watch?v=")!=-1:
+				final_list[i].append("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/"+ u[u.find("watch?v=")+8:] +"\" frameborder=\"0\" gesture=\"media\" allow=\"encrypted-media\" allowfullscreen></iframe>")
+				break
 	return final_list
 
 
