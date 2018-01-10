@@ -28,9 +28,13 @@ Provides Gaana.com links for the suggested songs
 
 ### How to use 
 Go to "https://moodys.azurewebsites.net/" on your browser.
+
 Ensure that the webcam is not blocked by your browser.
+
 Click to the "Take Photo" button to click a picture.
+
 (The processing may take up few seconds)
+
 The page redirects to the page containing your personalised playlist.
 
 Find the description video [here](https://www.youtube.com/watch?v=QjmtOSRsfcM)
