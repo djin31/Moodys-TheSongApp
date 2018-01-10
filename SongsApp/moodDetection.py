@@ -57,7 +57,7 @@ def songs(url1, url2, url3):
 			count+=1
 			url=str(url)
 			final_list.append([s,url[url.find('>')+1:url[1:].find('<')+1]])
-		if count==3:
+		if count==4:
 			break
 
 	html = urllib.urlopen(url2).read()
@@ -169,4 +169,4 @@ def work(imagepath):
 		final_list=songs("https://gaana.com/playlist/gaana-dj-slow-romantic-hits","https://gaana.com/playlist/gaana-dj-romantic-arijit", "https://gaana.com/playlist/gaana-dj-sad-songs-collection-sonu-nigam")
 	return (final_list, mood)		
 
-#print work("https://al-anon.org/wp-content/uploads/iStock-488977075Eng.jpg")
+
