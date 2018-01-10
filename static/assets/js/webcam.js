@@ -106,7 +106,7 @@
     } else {
       clearphoto();
     }
-    video.style.display = 'hidden';
+    video.style.display = 'none';
     canvas.style.display = 'block'
     post('/playlist/', {name: data}, 'post');
   }
