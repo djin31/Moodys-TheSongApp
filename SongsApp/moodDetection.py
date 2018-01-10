@@ -95,9 +95,9 @@ def songs(url1, url2, url3):
 		html = urllib.urlopen("https://www.youtube.com/results?search_query="+song_to_search).read()
 		soup = BS(html,"html.parser")
 		for url in soup.find_all('a'):
-			u = str(url)
+			u = str(url.get('href'))
 			if u.find("watch?v=")!=-1:
-				final_list[i].append("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/"+ u[u.find("watch?v=")+8:] +"\" frameborder=\"0\" gesture=\"media\" allow=\"encrypted-media\" allowfullscreen></iframe>")
+				final_list[i].append("https://www.youtube.com/embed/"+ u[u.find("watch?v=")+8:])
 				break
 	return final_list
 
@@ -170,3 +170,4 @@ def work(imagepath):
 	return (final_list, mood)		
 
 
+# print work("p")

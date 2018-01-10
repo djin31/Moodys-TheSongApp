@@ -25,8 +25,8 @@
 					</header>
 					<ul class = "alt">
 						{% for song in playList %}
-        					<li><a href="{{ song.0 }}">{{ song.1 }}</a>
-        						<p>{{song.2}}</p><!--Djin31-->/</li>
+        					<li><a href="{{ song.0 }}">{{ song.1 }}</a><br>
+        						<iframe width="300" height="180" src={{song.2}} frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe><!--Djin31--></li>
 
         				{% endfor %}
 					</ul>
