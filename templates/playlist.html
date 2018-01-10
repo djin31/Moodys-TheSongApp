@@ -25,7 +25,9 @@
 					</header>
 					<ul class = "alt">
 						{% for song in playList %}
-        					<li><a href="{{ song.0 }}">{{ song.1 }}</a></li>
+        					<li><a href="{{ song.0 }}">{{ song.1 }}</a>
+        						<p>{{song.2}}</p><!--Djin31-->/</li>
+
         				{% endfor %}
 					</ul>
 				</div>
