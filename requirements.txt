@@ -1,4 +1,4 @@
 setuptools
-django<2
+django>2
 bs4
 requests
